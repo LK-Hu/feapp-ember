@@ -10,11 +10,11 @@
         </div>
       <div class="login col-md-8">
     
-            <form {{ action "login" on="submit"}} role= "form">
-            <h2><span class="kf">Log in! </span></h2>
-              {{input type= "text" id="input" class="form-control" placeholder="UserName" value=userName}}
+            <form {{ action "authenticate" on="submit"}} role= "form">
+            <h2><span class="kf">Millionaire Labs </span></h2>
+              {{input type= "text" id="input" class="form-control" placeholder="User Email" value=userEmail}}
               {{input type="password" class="form-control" placeholder="Password" value=password}}
-              <button class="btn btn-primary btn-md" type="submit"><span class="kf">LOGIN</span> </button>
+              <button class="btn btn-primary btn-md" type="submit"><span class="kf">Sign In</span> </button>
               <br>
               <br>
               {{#link-to 'landingPage.signUp'}}Not in the lab? Register now{{/link-to}}
