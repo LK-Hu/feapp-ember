@@ -61,7 +61,7 @@ module.exports = function(environment) {
   ENV['simple-auth-devise'] = {
     resourceName: 'user',
     serverTokenEndPoint: 'users/sign_in',
-    tokenAttributeName: 'authentication_token',
+    tokenAttributeName: 'token',
     identificationAttributeName: 'user_email'
   };
 
