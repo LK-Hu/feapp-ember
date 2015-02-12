@@ -1,4 +1,4 @@
-// app/controllers/landing-page/sign-up.js
+// app/controllers/sign-up.js
 
 import Ember from 'ember';
 

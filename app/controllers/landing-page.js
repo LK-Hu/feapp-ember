@@ -41,13 +41,13 @@ export default Ember.Controller.extend({
     },
     signUp: {
       text: 'Sign Up',
-      route: 'landingPage.signUp',
+      route: 'signUp',
       pageLocation: '.sign-up-page-top',
       active: false
     },
     signIn: {
       text: 'Sign In',
-      route: 'landingPage.signIn',
+      route: 'signIn',
       pageLocation: '.sign-in-page-top',
       active: false
     }

@@ -1,4 +1,4 @@
-// app/views/landing-page/sign-up.js
+// app/views/sign-up.js
 
 import Ember from 'ember';
 
