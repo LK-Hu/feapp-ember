@@ -5,6 +5,14 @@ import LoginControllerMixin from 'simple-auth/mixins/login-controller-mixin';
 
 export default Ember.Controller.extend(LoginControllerMixin, {
   // specify Devise authenticator to be used
-  authenticator: 'simple-auth-authenticator:devise'
+  authenticator: 'simple-auth-authenticator:devise',
+  actions: {
+    authenticate: function() {
+     var self = this;
+     this._super().then(null, function(message){
+      self.set('errorMessage', message);
+     });
+    }
+  }
 
 });
