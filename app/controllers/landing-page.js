@@ -55,7 +55,6 @@ export default Ember.Controller.extend({
   },
   actions: {
     scrollTo: function(pageLocation) {
-      console.log('XXXX: SCROLLTO ' + Ember.$(pageLocation).offset().top);
       window.scrollTo(0, Ember.$(pageLocation).offset().top);
     }
   }

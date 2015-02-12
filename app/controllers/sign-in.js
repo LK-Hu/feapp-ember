@@ -9,7 +9,9 @@ export default Ember.Controller.extend(LoginControllerMixin, {
   actions: {
     authenticate: function() {
      var self = this;
-     this._super().then(null, function(message){
+     this._super().then(function(message) {
+      console.log(message);
+     }, function(message){
       self.set('errorMessage', message);
      });
     }
