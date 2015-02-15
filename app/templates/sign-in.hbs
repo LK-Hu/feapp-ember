@@ -1,4 +1,4 @@
-{{!-- /app/templates/landing-page/sign-in.hbs --}}
+{{!-- /app/templates/sign-in.hbs --}}
 
 <header>
 
@@ -15,6 +15,9 @@
               {{input type= "text" id="input" class="form-control" placeholder="UserName" value=userName}}
               {{input type="password" class="form-control" placeholder="Password" value=password}}
               <button class="btn btn-primary btn-md" type="submit"><span class="kf">LOGIN</span> </button>
+              <br>
+              <br>
+              {{#link-to 'landingPage.signUp'}}Not in the lab? Register now{{/link-to}}
               
           </form>
         </div>

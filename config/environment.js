@@ -46,7 +46,16 @@ module.exports = function(environment) {
   ENV.contentSecurityPolicy = {
     'img-src': "'self' s.gravatar.com",
     'style-src': "'self' 'unsafe-inline'",
-    'script-src': "'self' 'unsafe-eval' 'unsafe-inline'"
+    'script-src': "'self' 'unsafe-eval' 'unsafe-inline'",
+    'content-src': "'self' http://localhost:3000"
+  };
+
+  ENV['simple-auth'] = {
+    authorizer: 'simple-auth-authorizer:devise'
+  };
+
+  ENV['simple-auth-devise'] = {
+    resource: 'user'
   };
 
   return ENV;
