@@ -16,11 +16,15 @@ Router.map(function() {
     });
     this.route('signUp');
     this.route('signIn');
+   
   });
-
+  
   this.resource('users', function() {
+    
+    this.route('home');
+    
+    this.route('profile');
     
   });
 });
-
 export default Router;
