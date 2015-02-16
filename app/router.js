@@ -14,19 +14,16 @@ Router.map(function() {
       this.route('2');
       // add new blog route here.
     });
-<<<<<<< HEAD
+
     this.route('signUp');
     this.route('signIn');
    
   });
   
-=======
-  });
-
   this.route('signUp');
   this.route('signIn');
 
->>>>>>> remotes/origin/landingpage
+
   this.resource('users', function() {
     
     this.route('home');
