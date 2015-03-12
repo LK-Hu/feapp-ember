@@ -1,4 +1,4 @@
-// app/controllers/landing-page/sign-up.js
+// app/controllers/sign-up.js
 
 import Ember from 'ember';
 
@@ -14,7 +14,7 @@ export default Ember.Controller.extend({
       this.set('user.email',this.get('email'));
       this.set('user.password',this.get('password'));
       this.set('user.passwordConfirmation',this.get('passwordConfirmation'));
-      this.get('user').save();
+      // this.get('user').save();
     }
   }
 

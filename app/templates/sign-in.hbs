@@ -1,0 +1,35 @@
+{{!-- /app/templates/sign-in.hbs --}}
+
+<header>
+
+  <div class="login-container container">
+    <div class="row">
+      
+          <div class="wallet col-md-4">
+          <img src="assets/image/credit35.png" alt="">
+        </div>
+      <div class="login col-md-8">
+    
+            <form {{ action "authenticate" on="submit"}} role= "form">
+            <h2><span class="kf">Millionaire Labs </span></h2>
+              {{!-- {{input type= "text" class="form-control" placeholder="User Name" value=userName}}
+              {{input type="password" class="form-control" placeholder="Password" value=password}} --}}
+
+              <div class="form-group">
+                {{input value=identification placeholder='User Name' class='form-control'}}
+              </div>
+              <div class="form-group">
+                {{input value=password placeholder='Password' class='form-control'}}
+              </div>
+              <button class="btn btn-primary btn-md" type="submit"><span class="kf">Sign In</span> </button>
+              <br>
+              <br>
+              {{#link-to 'signUp'}}Not in the lab? Register now{{/link-to}}
+              
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+</header>

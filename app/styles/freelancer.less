@@ -18,7 +18,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-	color: @brand-success;
+	color: @brand-primary;
 	outline: none;
 }
 
@@ -87,7 +87,100 @@ header {
   
 .register-container {
     margin-top: 5px;
+  
 }
+  
+  
+/* Sidebar Styles */
+
+  #sidebar {
+  width: inherit;
+  min-width: 220px;
+  max-width: 220px;
+  float: left;
+  height:100%;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+  
+  
+  /*
+ * off Canvas sidebar
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 768px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    width:calc(100% + 220px);
+  }
+    
+  .row-offcanvas-left
+  {
+    left: -220px;
+  }
+
+  .row-offcanvas-left.active {
+    left: 0;
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+  }
+}
+  
+   /* ----- wrapper  ----- */
+  
+ #wrapper {
+    width: 100%;
+    margin-top: 55px!important; 
+    background-color:#04B173; 
+}
+
+#page-wrapper {
+    padding: 0 15px;
+    min-height: 568px;
+     background-color:rgb(209, 212, 216);
+}
+
+  
+/* user image section */
+ .user-section {
+    margin-top:20px;
+    font-size: 100px;
+   background: green;
+ }
+.user-section-inner {
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+overflow: hidden;
+display: inline-block;
+float: left;
+margin-right: 15px;
+margin-top: 20px;
+}
+    .user-section-inner img {
+        margin-left: 2em;
+        
+    }
+#user-info {
+display: inline-block;
+padding: 15px;
+margin-bottom: 0px
+  
+}
+  #user-info h3 {
+    
+    color: @brand-primary;
+    font-weight: bold;
+  
+  }
+  
+  
   /* ----- wallet Icon  ----- */
 
   .wallet {
@@ -118,13 +211,15 @@ header {
 .login form h2 {
     margin-bottom: 25px;
     padding-bottom: 15px;
-    border-bottom: 4px dotted @brand-primary;
+   
     font-size: 30px;
     font-weight: 400;
     text-align: center;
     color: red;
 }
   
+  
+
   
   /* ----- Registration Form ----- */
 
@@ -144,7 +239,6 @@ header {
     margin-bottom: 25px;
     padding-bottom: 15px;
     border-bottom: 4px dotted @brand-primary;
-  background: url(image/family2.png) 70px 6px no-repeat;
     font-size: 30px;
     font-weight: 400;
     text-align: center;
@@ -252,6 +346,69 @@ header {
 		}
 	}
 }
+
+ .nav-pills, .nav-stacked{
+
+   background: #00BFAF;
+   font-weight: bold;
+    color:black;
+   
+   li {
+    
+			a:focus {
+				outline: none;
+			}
+     
+     a:hover {
+				outline: none;
+       background: #FFC719;
+			}
+		}
+}
+
+.application {
+
+ background: #00BFAF;
+
+}
+
+
+.user{
+
+background: #00BFAF;
+}
+
+.m2 {
+
+background: #FF7032;
+
+}
+
+.m1 {
+
+background: #47B042;
+
+}
+
+.m3 {
+
+background: #FFC719;
+
+
+}
+
+
+.m4 {
+
+
+background: #E9EB4C;
+  
+}
+
+.info {padding-left: 4em; }
+
+
+
 
 .navbar-default,
 .navbar-inverse {

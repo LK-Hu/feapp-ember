@@ -1,1 +1,115 @@
-{{outlet}} Test Test Test 
+<header>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+       <a class="navbar-brand kf" style="cursor:pointer"> <i class="ki k-tree"></i>Millionaire Labs</a>
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <button type="button" class="btn btn-default navbar-btn">Sign out</button>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+</header>
+<!-- navbar side -->
+
+
+<div class="container">
+    <div class="row">
+      <div class="row-offcanvas row-offcanvas-left">
+        <div class="sidebar-offcanvas">
+        <div id="container-nav" class="col-md-2">
+          <!-- user image section-->
+                      <div class="user-section-inner">
+                          <img src="assets/image/user.png" alt="">
+                      </div>
+                          <div id="user-info">
+                                <h3> <span class="kf"> Jonny Deen </span></h3>  
+                            </div>
+             
+            <!--end user image section-->
+          <ul  class="nav nav-pills nav-stacked">
+        <li><a href="#"><i class=" fa fa-home fa-3x"></i> Home</a></li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa  fa-pencil-square-o fa-3x"></i> Profile<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><i class="fa  fa-pencil-square-o"></i> Edit</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><i class="fa fa-tachometer fa-3x"></i> Dashboard</a></li>
+        <li><a href="#"><i class="fa fa-credit-card fa-3x"></i> Account</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+    
+      <div id="page-wrapper" class="register col-md-10">
+        <div class="panel panel-default">
+              <div  class="panel-heading">
+                <i class="fa  fa-pencil-square-o fa-2x">  <span class="kf"> Edit Profile  </span></i> 
+              </div>
+          
+          <div class="register-container container">
+           <div class="register col-md-6">
+                       <br>
+
+              <form role="form">
+          
+                <div class="form-group">
+                  <label>Create a Family Username</label>
+                  <input class="form-control" placeholder="Family UserName">
+              </div>
+                <!-- search section-->
+                <label>Add your family members</label>
+                        <div class="input-group custom-search-form">
+                          
+                            <input type="text" class="form-control" placeholder="Search family members">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                <!--end search section-->
+                
+                <div class="form-group">
+                <label>Select the bank account for you children</label>
+                <select class="form-control">
+                  <option>Cheking/Saving </option>
+                  <option>Credit Card</option>
+                  <option>Time Deposit</option>
+                </select>
+               </div>
+                
+                 <button type="submit" class="btn btn-primary">Submit </button>
+                 <button type="reset" class="btn btn-success">Reset </button>
+                
+             </form>
+          </div>
+          </div>
+          
+          <div class="col-md-4">
+          
+          </div>
+          
+          </div>
+        </div>
+        </div>
+      </div>

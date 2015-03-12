@@ -46,7 +46,23 @@ module.exports = function(environment) {
   ENV.contentSecurityPolicy = {
     'img-src': "'self' s.gravatar.com",
     'style-src': "'self' 'unsafe-inline'",
-    'script-src': "'self' 'unsafe-eval' 'unsafe-inline'"
+    'script-src': "'self' 'unsafe-eval' 'unsafe-inline'",
+    'content-src': "'self' http://localhost:3000"
+  };
+
+  ENV['simple-auth'] = {
+    authorizer: 'simple-auth-authorizer:devise',
+    authenticationRoute: 'signIn',
+    routeAfterAuthentication: 'blog.index',
+    routeIfAlreadyAuthenticated: 'blog.index',
+    crossOriginWhitelist: ['http://localhost:3000', 'https://millionaire-labs.heroku.com', 'https://millionaire-labs.com']
+  };
+
+  ENV['simple-auth-devise'] = {
+    resourceName: 'user',
+    serverTokenEndpoint: 'http://localhost:3000/users/sign_in',
+    tokenAttributeName: 'token',
+    identificationAttributeName: 'user_name'
   };
 
   return ENV;
