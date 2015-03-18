@@ -19,30 +19,6 @@ module.exports = function(environment) {
     }
   };
 
-  if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    ENV.APP.LOG_VIEW_LOOKUPS = true;
-  }
-
-  if (environment === 'test') {
-    // Testem prefers this...
-    ENV.baseURL = '/';
-    ENV.locationType = 'auto';
-
-    // keep test console output quieter
-    ENV.APP.LOG_ACTIVE_GENERATION = false;
-    ENV.APP.LOG_VIEW_LOOKUPS = false;
-
-    ENV.APP.rootElement = '#ember-testing';
-  }
-
-  if (environment === 'production') {
-
-  }
-
   ENV.contentSecurityPolicy = {
     'img-src': "'self' s.gravatar.com",
     'style-src': "'self' 'unsafe-inline'",
@@ -61,10 +37,46 @@ module.exports = function(environment) {
 
   ENV['simple-auth-devise'] = {
     resourceName: 'user',
-    serverTokenEndpoint: 'http://localhost:3000/users/sign_in',
+    serverTokenEndpoint: '',
     tokenAttributeName: 'token',
     identificationAttributeName: 'user_name'
   };
+
+
+  // ***************************************
+  // configuration in different environments
+  // ***************************************
+  if (environment === 'development') {
+    // ENV.APP.LOG_RESOLVER = true;
+    ENV.APP.LOG_ACTIVE_GENERATION = true;
+    // ENV.APP.LOG_TRANSITIONS = true;
+    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV['simple-auth-devise'].serverTokenEndpoint = 'http://localhost:3000/users/sign_in';
+    ENV.host = 'http://localhost:3000';
+  }
+
+  if (environment === 'test') {
+    // Testem prefers this...
+    ENV.baseURL = '/';
+    ENV.locationType = 'auto';
+
+    // keep test console output quieter
+    ENV.APP.LOG_ACTIVE_GENERATION = false;
+    ENV.APP.LOG_VIEW_LOOKUPS = false;
+
+    ENV.APP.rootElement = '#ember-testing';
+    ENV['simple-auth-devise'].serverTokenEndpoint = 'http://localhost:3000/users/sign_in';
+    ENV.host = 'http://localhost:3000';
+
+  }
+
+  if (environment === 'production') {
+    // setup for simple-auth-devise
+    ENV['simple-auth-devise'].serverTokenEndpoint = 'https://millionaire-labs.heroku.com/users/sign_in';
+    ENV.host = 'https://millionaire-labs.heroku.com';
+  }
 
   return ENV;
 };

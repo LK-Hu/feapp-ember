@@ -4,10 +4,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function () {
-    //return this.store.find('user');
-  },
-  setupController: function(controller, model) {
-    this._super(controller, model);
-    controller.set('user', this.store.createRecord('user', {}));
+    return this.store.createRecord('user', {});
   }
 });
