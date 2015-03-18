@@ -47,7 +47,8 @@ module.exports = function(environment) {
     'img-src': "'self' s.gravatar.com",
     'style-src': "'self' 'unsafe-inline'",
     'script-src': "'self' 'unsafe-eval' 'unsafe-inline'",
-    'content-src': "'self' http://localhost:3000"
+    'content-src': "'self' http://localhost:3000",
+    'connect-src': "'self' http://localhost:3000"
   };
 
   ENV['simple-auth'] = {
