@@ -1,9 +1,12 @@
-// app/adapters/user.js
-
 import DS from 'ember-data';
-import ENV from 'feapp/config/environment';
+import AdapterConfigMixin from 'feapp/mixins/adapter-config';
 
-export default DS.ActiveModelAdapter.extend({
-  // user GET, PUT, POST, PATCH go through /users, no namespace for versioning needed.
-  host: ENV.host
+export default DS.ActiveModelAdapter.extend(AdapterConfigMixin, {
+  createRecord: function(store, type, record) {
+    var namespace = this.get('namespace');
+    this.set('namespace', '');
+    var value = this._super(store, type, record);
+    this.set('namespace', namespace);
+    return value;
+  }
 });

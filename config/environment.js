@@ -53,8 +53,9 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
 
-    ENV['simple-auth-devise'].serverTokenEndpoint = 'http://localhost:3000/users/sign_in';
+    ENV['simple-auth-devise']['serverTokenEndpoint'] = 'http://localhost:3000/users/sign_in';
     ENV.host = 'http://localhost:3000';
+    ENV.version = 'v1';
   }
 
   if (environment === 'test') {
@@ -67,15 +68,16 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
-    ENV['simple-auth-devise'].serverTokenEndpoint = 'http://localhost:3000/users/sign_in';
+    ENV['simple-auth-devise']['serverTokenEndpoint'] = 'http://localhost:3000/users/sign_in';
     ENV.host = 'http://localhost:3000';
-
+    ENV.version = 'v1';
   }
 
   if (environment === 'production') {
     // setup for simple-auth-devise
-    ENV['simple-auth-devise'].serverTokenEndpoint = 'https://millionaire-labs.heroku.com/users/sign_in';
+    ENV['simple-auth-devise']['serverTokenEndpoint'] = 'https://millionaire-labs.heroku.com/users/sign_in';
     ENV.host = 'https://millionaire-labs.heroku.com';
+    ENV.version = 'v1';
   }
 
   return ENV;

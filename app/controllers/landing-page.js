@@ -50,6 +50,12 @@ export default Ember.Controller.extend({
       route: 'signIn',
       pageLocation: '.sign-in-page-top',
       active: false
+    },
+    Users: {
+      text: 'Users',
+      route: 'users.index',
+      pageLocation: '.sign-in-page-top',
+      active: false
     }
 
   },

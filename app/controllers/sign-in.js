@@ -4,16 +4,16 @@ import Ember from 'ember';
 import LoginControllerMixin from 'simple-auth/mixins/login-controller-mixin';
 
 export default Ember.Controller.extend(LoginControllerMixin, {
-  // specify Devise authenticator to be used
-  authenticator: 'simple-auth-authenticator:devise',
+  // signInErrorMessage will be set when sessionAuthenticationFailed
+  signInErrorMessage: '', 
+  displayErrorMessage: function() {
+    console.log('display error message');
+    console.log(Ember.$('h2').text());
+  }.observes('signInErrorMessage'),
   actions: {
     authenticate: function() {
-     var self = this;
-     this._super().then(function(message) {
-      console.log(message);
-     }, function(message){
-      self.set('errorMessage', message);
-     });
+      var data = this.getProperties('identification', 'password');
+      return this.get('session').authenticate('simple-auth-authenticator:devise', data);
     }
   }
 
