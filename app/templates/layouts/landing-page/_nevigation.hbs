@@ -1,0 +1,52 @@
+{{!-- app/templates/langing-page/nevigation.hbs --}}
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand kf" style="cursor:pointer" {{action 'transitionAndScroll' 'landingPage.index' '.page-top' target=view}}><i class="ki k-tree"></i>Millionaire Labs</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    {{#nav-li active=navbar.about.active dataTarget=navbar.about.pageLocation route=navbar.about.route class='kf'}}
+                        {{navbar.about.text}}
+                    {{/nav-li}}
+
+                    {{#nav-li active=navbar.features.active dataTarget=navbar.features.pageLocation route=navbar.features.route class='kf'}}
+                        {{navbar.features.text}}
+                    {{/nav-li}}
+                    
+                    {{#nav-li active=navbar.team.active dataTarget=navbar.team.pageLocation route=navbar.team.route class='kf'}}
+                        {{navbar.team.text}}
+                    {{/nav-li}}
+                    
+                    {{#nav-li active=navbar.blog.active dataTarget=navbar.blog.pageLocation route=navbar.blog.route class='kf'}}
+                        {{navbar.blog.text}}
+                    {{/nav-li}}
+                    
+                    {{#nav-li active=navbar.signUp.active dataTarget=navbar.signUp.pageLocation route=navbar.signUp.route class='kf'}}
+                        {{navbar.signUp.text}}
+                    {{/nav-li}}
+                    
+                    {{#nav-li active=navbar.signIn.active dataTarget=navbar.signIn.pageLocation route=navbar.signIn.route class='kf'}}
+                        {{navbar.signIn.text}}
+                    {{/nav-li}}
+
+                    {{#nav-li active=navbar.Users.active dataTarget=navbar.Users.pageLocation route=navbar.Users.route class='kf'}}
+                        {{navbar.Users.text}}
+                    {{/nav-li}}
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>

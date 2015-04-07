@@ -10,8 +10,6 @@ export default Ember.View.extend({
       this.send('scrollTo', pageLocation);
     },
     scrollTo: function(pageLocation) {
-      console.log('>>> try to scroll to top');
-      console.log('>>> $().scrollTop() ' + this.$().offset().top);
       this.$().animate({
         scrollTop: this.$(pageLocation).offset().top
       });

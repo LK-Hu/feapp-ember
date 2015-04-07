@@ -1,2 +1,15 @@
 {{!-- app/templates/application.hbs --}}
-{{outlet}}
+{{#if session.isAuthenticated}}
+  {{partial 'layouts/app/nevigation'}}
+{{else}}
+  {{partial 'layouts/landing-page/nevigation'}}
+{{/if}}
+<div class='page-top'>
+  {{outlet}}
+</div>
+
+{{#if session.isAuthenticated}}
+  {{partial 'layouts/app/footer'}}
+{{else}}
+  {{partial 'layouts/landing-page/footer'}}
+{{/if}}

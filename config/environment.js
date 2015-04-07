@@ -30,9 +30,10 @@ module.exports = function(environment) {
   ENV['simple-auth'] = {
     authorizer: 'simple-auth-authorizer:devise',
     authenticationRoute: 'signIn',
-    routeAfterAuthentication: 'blog.index',
-    routeIfAlreadyAuthenticated: 'blog.index',
-    crossOriginWhitelist: ['http://localhost:3000', 'https://millionaire-labs.heroku.com', 'https://millionaire-labs.com']
+    routeAfterAuthentication: 'home',
+    routeIfAlreadyAuthenticated: 'home',
+    crossOriginWhitelist: ['http://localhost:3000', 'https://millionaire-labs.heroku.com', 'https://millionaire-labs.com'],
+    key: 'millionaire_labs:session'
   };
 
   ENV['simple-auth-devise'] = {

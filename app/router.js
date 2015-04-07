@@ -19,6 +19,8 @@ Router.map(function() {
   this.route('signUp');
   this.route('signIn');
 
+  this.route('home');
+
 
   this.resource('users', function() {
     this.route('home');
