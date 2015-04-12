@@ -33,7 +33,7 @@ module.exports = function(environment) {
     routeAfterAuthentication: 'home',
     routeIfAlreadyAuthenticated: 'home',
     crossOriginWhitelist: ['http://localhost:3000', 'https://millionaire-labs.heroku.com', 'https://millionaire-labs.com'],
-    key: 'millionaire_labs:session'
+    localStorageKey: 'millionaire_labs:session'
   };
 
   ENV['simple-auth-devise'] = {
