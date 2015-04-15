@@ -19,14 +19,6 @@ module.exports = function(environment) {
     }
   };
 
-  ENV.contentSecurityPolicy = {
-    'img-src': "'self' s.gravatar.com",
-    'style-src': "'self' 'unsafe-inline'",
-    'script-src': "'self' 'unsafe-eval' 'unsafe-inline'",
-    'content-src': "'self' http://localhost:3000",
-    'connect-src': "'self' http://localhost:3000"
-  };
-
   ENV['simple-auth'] = {
     authorizer: 'simple-auth-authorizer:devise',
     authenticationRoute: 'signIn',
@@ -43,6 +35,14 @@ module.exports = function(environment) {
     identificationAttributeName: 'user_name'
   };
 
+  ENV.contentSecurityPolicy = {
+    'default-src' : "'self'",
+    'img-src': "*",
+    'style-src': "'self' 'unsafe-inline'",
+    'script-src': "'self' 'unsafe-eval' 'unsafe-inline' https://www.google-analytics.com",
+    'connect-src': "'self' http://localhost:3000",
+    'frame-src': "'self' https://www.youtube.com"
+  };
 
   // ***************************************
   // configuration in different environments
@@ -79,6 +79,9 @@ module.exports = function(environment) {
     ENV['simple-auth-devise']['serverTokenEndpoint'] = 'https://millionaire-labs.heroku.com/users/sign_in';
     ENV.host = 'https://millionaire-labs.heroku.com';
     ENV.version = 'v1';
+    ENV.googleAnalytics = {
+      webPropertyId: 'UA-61915216-1'
+    }
   }
 
   return ENV;

@@ -17,7 +17,8 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 
     return this.store.find('user', query);
   },
-  afterModel: function() {
-    Ember.$('body').removeClass('loading');
+  setupController: function(user, controller) {
+    // pre-load the families
+    var familyUserRelations = Ember.RSVP.makePromise(user.get('familyUserRelations'));
   }
 });

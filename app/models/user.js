@@ -5,6 +5,7 @@ export default DS.Model.extend({
   email: DS.attr('string'),
   password: DS.attr('string'),
   passwordConfirmation: DS.attr('string'),
+  role: DS.attr('string'),
   familyUserRelations: DS.hasMany('familyUserRelation', {async: true}),
   families: function() {
     return this.get('familyUserRelations').then(function(familyUserRelations) {
