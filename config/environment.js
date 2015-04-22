@@ -40,7 +40,7 @@ module.exports = function(environment) {
     'img-src': "*",
     'style-src': "'self' 'unsafe-inline'",
     'script-src': "'self' 'unsafe-eval' 'unsafe-inline' https://www.google-analytics.com",
-    'connect-src': "'self' http://localhost:3000",
+    'connect-src': "'self' http://localhost:3000 https://millionaire-labs.herokuapp.com/",
     'frame-src': "'self' https://www.youtube.com"
   };
 
