@@ -9,7 +9,7 @@ export default Ember.Component.extend({
   // dataTarge: pass in value,
   // route: pass in value,
   // onClickActions: pass in value (array)
-  transitionToRoute: 'transitionToRoute',
+  transitionToRoute: 'appTransitTo',
   scrollTo: 'scrollTo',
   click: function() {
     var self = this;

@@ -50,6 +50,9 @@ export default Ember.Controller.extend({
   actions: {
     scrollTo: function(pageLocation) {
       window.scrollTo(0, Ember.$(pageLocation).offset().top);
+    },
+    appTransitTo: function(route) {
+      this.transitionToRoute(route);
     }
   }
 });
