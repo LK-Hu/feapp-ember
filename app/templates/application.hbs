@@ -2,7 +2,8 @@
 {{#if session.isAuthenticated}}
   {{partial 'layouts/app/nevigation'}}
 {{else}}
-  {{partial 'layouts/landing-page/nevigation'}}
+  {{!-- {{partial 'layouts/landing-page/nevigation'}} --}}
+  {{partial 'layouts/app/nevigation'}}
 {{/if}}
 <div class='page-top'>
   {{outlet}}
