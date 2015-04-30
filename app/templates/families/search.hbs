@@ -1,0 +1,8 @@
+{{!-- app/templates/families/search.hbs --}}
+<div class='page-top-spacer'>
+  {{#each family in model}}
+    {{family.familyName}}
+    {{log 'family.familyNameis:' family.familyName}}
+  {{/each}}
+</div>
+

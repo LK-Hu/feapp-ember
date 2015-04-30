@@ -16,7 +16,8 @@ var User = DS.Model.extend({
 User.reopenClass({
   FIXTURES: [
     {id: 1, userName: 'likun', email: 'likun@millionaire-labs.com', password: 'hu.likun', familyUserRelations: ['1', '2']},
-    {id: 2, userName: 'Edward', email: 'edward@millionaire-labs.com', familyUserRelations: ['3']}
+    {id: 2, userName: 'Edward', email: 'edward@millionaire-labs.com', familyUserRelations: ['3']},
+    {id: 3, userName: 'Tyrion', email: 'tyrion@millionaire-labs.com'}
   ]
 });
 

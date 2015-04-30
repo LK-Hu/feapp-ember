@@ -19,7 +19,7 @@ export default Ember.Route.extend({
   //   return this.store.find('user', query);
   // },
   model: function() {
-    return this.store.find('user', 1);
+    return this.store.find('user', 3);
   },
 
   afterModel: function(user, transition) {
@@ -45,7 +45,7 @@ export default Ember.Route.extend({
         });
       } else {
         // user doesn't belong to any family
-        self.transitionTo('searchFamiles');
+        self.transitionTo('families.search');
       }
     });
 

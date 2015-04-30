@@ -26,7 +26,20 @@ Router.map(function() {
   this.resource('users', function() {
     this.route('home');
     this.route('profile');
-    
   });
+
+  this.resource('user', { path: 'users/:user_id' }, function() {
+
+  });
+
+  this.resource('families', function() {
+    this.route('search');
+  });
+
+  this.resource('family', { path: 'families/:family_id' }, function() {
+
+  });
+
+
 });
 export default Router;
