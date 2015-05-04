@@ -28,10 +28,12 @@ export default Ember.Route.extend({
     user.get('families').then(function(families){
 
       if (families.length > 0){
+        // user has families
         user.get('familyUserRelations').then(function(familyUserRelations){
           var primaryFamilyUserRelation = familyUserRelations.find(function(familyUserRelation){
             return familyUserRelation.get('isPrimary');
           });
+
           if (primaryFamilyUserRelation === undefined){
             // user didn't set primary family
             self.transitionTo('family.list');
@@ -42,11 +44,13 @@ export default Ember.Route.extend({
             });
             self.transitionTo('parent.dashboard', primaryFamily);
           }
+
         });
       } else {
         // user doesn't belong to any family
         self.transitionTo('families.search');
       }
+
     });
 
   }

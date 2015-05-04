@@ -9,8 +9,6 @@
   {{outlet}}
 </div>
 
-{{#if session.isAuthenticated}}
-  {{partial 'layouts/app/footer'}}
-{{else}}
-  {{partial 'layouts/landing-page/footer'}}
-{{/if}}
+{{#unless session.isAuthenticated}}
+  {{!-- {{partial 'layouts/landing-page/footer'}} --}}
+{{/unless}}

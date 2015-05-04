@@ -1,8 +1,19 @@
-{{!-- app/templates/families/search.hbs --}}
-<div class='page-top-spacer'>
-  {{#each family in model}}
-    {{family.familyName}}
-    {{log 'family.familyNameis:' family.familyName}}
-  {{/each}}
+{{!-- app/templates/families/search --}}
+<div class="page-top-spacer page-bottom-spacer">
+  <div class="row">
+    <div class="col-md-offset-3">
+      {{#link-to 'families.create' class='btn btn-default'}}Create Family{{/link-to}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form class="form-inline">
+        <div class="form-group col-xs-9">
+          <label for="familyNameInput" class="sr-only"></label>
+          <input type="text" class="form-control" style="width: 100%" placeholder="Family Name">
+        </div>
+        <button class="btn btn-default col-xs-3" type="button">Search</button>
+      </form>
+    </div>
+  </div>
 </div>
-

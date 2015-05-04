@@ -34,6 +34,8 @@ Router.map(function() {
 
   this.resource('families', function() {
     this.route('search');
+    this.route('index');
+    this.route('create');
   });
 
   this.resource('family', { path: 'families/:family_id' }, function() {

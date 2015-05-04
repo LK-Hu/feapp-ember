@@ -1,0 +1,16 @@
+{{!-- app/templates/families/index.hbs --}}
+<div class='page-top-spacer'>
+  {{#each family in model}}
+    {{log 'family.familyNameis: ' family.familyName}}
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Family Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{family-table-component family=family}}        
+      </tbody>
+    </table>
+  {{/each}}
+</div>
