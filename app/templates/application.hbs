@@ -1,14 +1,3 @@
-{{!-- app/templates/application.hbs --}}
-{{#if session.isAuthenticated}}
-  {{partial 'layouts/app/nevigation'}}
-{{else}}
-  {{!-- {{partial 'layouts/landing-page/nevigation'}} --}}
-  {{partial 'layouts/app/nevigation'}}
-{{/if}}
-<div class='page-top'>
-  {{outlet}}
-</div>
+{{partial 'layouts/navigation'}}
 
-{{#unless session.isAuthenticated}}
-  {{!-- {{partial 'layouts/landing-page/footer'}} --}}
-{{/unless}}
+{{outlet}}

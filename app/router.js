@@ -8,15 +8,7 @@ var Router = Ember.Router.extend(googlePageview, {
   location: config.locationType
 });
 
-Router.map(function() {
-  this.resource('landingPage', { path: '/' }, function() {
-    this.resource('blog', function() {
-      this.route('1');
-      this.route('2');
-      // add new blog route here.
-    });
-  });
-  
+Router.map(function() { 
   this.route('signUp');
   this.route('signIn');
 
@@ -24,8 +16,7 @@ Router.map(function() {
 
 
   this.resource('users', function() {
-    this.route('home');
-    this.route('profile');
+    this.route('index');
   });
 
   this.resource('user', { path: 'users/:user_id' }, function() {

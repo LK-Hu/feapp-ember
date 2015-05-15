@@ -15,11 +15,11 @@ var fontAwesome = pickFiles('vendor/font-awesome-4.1.0/fonts', {
   files: ['**/*'],
   destDir: '/fonts'
 });
-var kidsFont = pickFiles('vendor/kids-font/fonts', {
-  srcDir: '/',
-  files: ['**/*'],
-  destDir: '/fonts'
-})
+// var kidsFont = pickFiles('vendor/kids-font/fonts', {
+//   srcDir: '/',
+//   files: ['**/*'],
+//   destDir: '/fonts'
+// })
 
 
 // Use `app.import` to add additional libraries to the generated
@@ -33,13 +33,6 @@ app.import('bower_components/moment/moment.js');
 
 // Plugin JavaScript
 app.import('vendor/jquery.easing.min.js');
-app.import('vendor/freelancer-template/classie.js');
-app.import('vendor/freelancer-template/cbpAnimatedHeader.js');
-
-app.import('vendor/freelancer-template/contact_me.js');
-app.import('vendor/freelancer-template/jqBootstrapValidation.js');
-
-app.import('vendor/freelancer-template/freelancer.js');
 
 // a js link from //s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js for mailchamp
 app.import('vendor/mc-validate.js');
@@ -61,4 +54,4 @@ app.import('vendor/wow/wow.min.js');
 
 var outputTrees = [app.toTree()]
 
-module.exports = mergeTrees([app.toTree(), bootstrapFonts, fontAwesome, kidsFont]);
+module.exports = mergeTrees([app.toTree(), bootstrapFonts, fontAwesome]);
